@@ -4,8 +4,8 @@ import { NavLink, useNavigate } from 'react-router';
 
 const Navbar = () => {
     const navigate = useNavigate();
-    const [showMenu, setShowMenu] = useState(false);
-    const [token, setToken] = useState(true);
+    // const [showMenu, setShowMenu] = useState(false);
+    const [token, setToken] = useState(false);
 
     return (
         <div className='flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-400'>
@@ -54,7 +54,7 @@ const Navbar = () => {
                         </div>
                         : <button
                             onClick={() => navigate('/login')}
-                            className='bg-primary text-white px-8 py-3 rounded-full font-light hidden md:block'>Create Account</button>
+                            className='bg-primary text-white px-8 py-3 rounded-full font-light hidden md:block cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out'>Create Account</button>
                 }
             </div>
         </div>
